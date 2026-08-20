@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Produtos Selecionados | Cosmos Hogar</title>
+<meta name="description" content="Achados selecionados de beleza, moda, casa, cozinha, bem-estar e produtos digitais. Explore tudo em uma só página e filtre do seu jeito.">
+<style>
+:root{
+  --ink:#171717;--muted:#6f6a68;--paper:#fffaf7;--card:#fff;
+  --rose:#cf6f9d;--rose2:#f4d7e5;--lav:#b788d8;--mint:#9dcfbf;
+  --line:#eadfd9;--shadow:0 12px 40px rgba(57,42,39,.08)
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:linear-gradient(#fff,#fffaf7 55%,#fff);font-family:Inter,ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Arial;color:var(--ink)}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1240px;margin:auto;padding:0 22px}
+header{position:sticky;top:0;z-index:40;background:rgba(255,255,255,.94);backdrop-filter:blur(14px);border-bottom:1px solid rgba(234,223,217,.7)}
+.nav{height:76px;display:flex;align-items:center;justify-content:space-between;gap:28px}
+.brand{font-size:24px;letter-spacing:.02em}.brand b{font-weight:750}.brand span{color:var(--rose)}
+.navlinks{display:flex;gap:26px;font-size:14px}.navlinks a.active{color:var(--rose);font-weight:700}
+.hero{padding:62px 0 28px;text-align:center}
+.eyebrow{font-size:12px;font-weight:800;letter-spacing:.15em;color:var(--rose);text-transform:uppercase}
+h1{font-family:Georgia,serif;font-size:clamp(42px,6vw,72px);margin:8px 0 8px;font-weight:600}
+.hero .script{font-family:Georgia,serif;font-style:italic;color:var(--rose);font-size:24px}
+.hero p{max-width:720px;margin:18px auto 0;color:var(--muted);line-height:1.65}
+.filters-shell{position:sticky;top:76px;z-index:30;background:rgba(255,250,247,.94);backdrop-filter:blur(12px);padding:14px 0;border-bottom:1px solid var(--line)}
+.filters{display:flex;gap:10px;align-items:center;flex-wrap:wrap}
+.filter-btn{border:1px solid var(--line);background:#fff;padding:12px 16px;border-radius:14px;font-weight:700;cursor:pointer}
+.filter-btn.active{background:linear-gradient(135deg,var(--rose),#b968a0);color:#fff;border-color:transparent}
+.search{margin-left:auto;min-width:260px;display:flex;align-items:center;border:1px solid var(--line);background:#fff;border-radius:14px;padding:0 14px}
+.search input{width:100%;border:0;outline:0;padding:12px;background:transparent}
+.section{padding:34px 0 10px}
+.section-head{display:flex;align-items:end;justify-content:space-between;margin-bottom:18px}
+.section-head h2{font-family:Georgia,serif;font-size:35px;color:var(--rose);margin:0}
+.section-head p{margin:6px 0 0;color:var(--muted)}
+.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:22px;overflow:hidden;box-shadow:var(--shadow);display:flex;flex-direction:column;transition:.2s transform,.2s box-shadow}
+.card:hover{transform:translateY(-4px);box-shadow:0 18px 48px rgba(57,42,39,.13)}
+.card-media{aspect-ratio:4/5;background:#f7f0ec;overflow:hidden;position:relative}
+.card-media img{width:100%;height:100%;object-fit:cover;display:block}
+.tag{position:absolute;left:12px;top:12px;background:rgba(255,255,255,.9);padding:7px 10px;border-radius:999px;font-size:11px;font-weight:800}
+.card-body{padding:18px;display:flex;flex-direction:column;gap:10px;flex:1}
+.card h3{font-size:18px;margin:0;line-height:1.25}
+.card p{margin:0;color:var(--muted);font-size:14px;line-height:1.55}
+.cta{margin-top:auto;display:inline-flex;align-items:center;justify-content:center;background:linear-gradient(135deg,var(--rose),var(--lav));color:white;border-radius:12px;padding:12px 15px;font-weight:800}
+.cta.disabled{background:#c9c4c1;pointer-events:none}
+.empty{padding:60px 0;text-align:center;color:var(--muted)}
+.back{position:fixed;right:22px;bottom:22px;background:#fff;border:1px solid var(--line);box-shadow:var(--shadow);border-radius:999px;padding:12px 16px;font-weight:800;display:none}
+footer{margin-top:64px;padding:34px 0;border-top:1px solid var(--line);color:var(--muted);font-size:13px}
+@media(max-width:900px){.grid{grid-template-columns:repeat(2,1fr)}.navlinks{display:none}.search{order:2;width:100%;margin-left:0}.filters-shell{top:76px}}
+@media(max-width:600px){.grid{grid-template-columns:1fr}.hero{padding-top:38px}.section-head h2{font-size:30px}.back{display:block}}
+</style>
+</head>
+<body id="top">
+<header>
+  <div class="wrap nav">
+    <a class="brand" href="/"><b>✦ COSMOS</b><span>HOGAR</span></a>
+    <nav class="navlinks">
+      <a href="/">Início</a>
+      <a href="/#selecionados" class="active">Produtos Selecionados</a>
+      <a href="/cozinha">Biblioteca</a>
+      <a href="/#comunidade">Comunidade</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap">
+    <div class="eyebrow">Produtos selecionados</div>
+    <h1>Encontre o que combina<br>com a sua vida.</h1>
+    <div class="script">achados que tornam seu dia mais bonito, prático e especial</div>
+    <p>Explore tudo em uma só página. Use os filtros quando quiser ir direto ao ponto ou role a vitrine completa e descubra algo que nem estava procurando.</p>
+  </div>
+</section>
+
+<div class="filters-shell">
+  <div class="wrap filters">
+    <button class="filter-btn active" data-filter="todos">▦ Todos</button>
+    <button class="filter-btn" data-filter="beleza">✦ Beleza</button>
+    <button class="filter-btn" data-filter="moda">◌ Moda</button>
+    <button class="filter-btn" data-filter="casa">⌂ Casa</button>
+    <button class="filter-btn" data-filter="cozinha">✣ Cozinha</button>
+    <button class="filter-btn" data-filter="bem-estar">☼ Bem-estar</button>
+    <button class="filter-btn" data-filter="digitais">▤ Digitais</button>
+    <label class="search">⌕ <input id="q" placeholder="Buscar produto..."></label>
+  </div>
+</div>
+
+<main class="wrap" id="catalog"></main>
+
+<a href="#top" class="back">↑ Filtros</a>
+
+<footer>
+  <div class="wrap">Uma marca do ecossistema Código Cosmos · Links de afiliados podem gerar comissão sem custo extra para você.</div>
+</footer>
+
+<script src="products.js"></script>
+<script>
+const meta={
+  beleza:["Beleza","Cuidados para você se sentir ainda melhor todos os dias."],
+  moda:["Moda","Peças e inspirações para diferentes estilos e ocasiões."],
+  casa:["Casa","Achados para deixar seus espaços mais bonitos e funcionais."],
+  cozinha:["Cozinha","Praticidade para cozinhar e aproveitar melhor o dia a dia."],
+  "bem-estar":["Bem-estar","Conforto, equilíbrio e autocuidado para sua rotina."],
+  digitais:["Produtos digitais","Guias, e-books e materiais práticos para aprender e fazer."]
+};
+let current="todos";
+const catalog=document.getElementById("catalog"), q=document.getElementById("q");
+function card(p){
+  const disabled=p.url==="#"?' disabled':'';
+  const href=p.url==="#"?'javascript:void(0)':p.url;
+  return `<article class="card">
+    <a class="card-media" href="${href}" target="_blank" rel="noopener sponsored">
+      <img src="${p.img}" alt="${p.title}" loading="lazy">
+      <span class="tag">${p.tag||meta[p.cat][0]}</span>
+    </a>
+    <div class="card-body">
+      <h3>${p.title}</h3>
+      <p>${p.desc}</p>
+      <a class="cta${disabled}" href="${href}" target="_blank" rel="noopener sponsored">${p.url==="#"?'Link em atualização':'Ver oferta →'}</a>
+    </div>
+  </article>`;
+}
+function render(){
+  const query=q.value.trim().toLowerCase();
+  const cats=current==="todos"?Object.keys(meta):[current];
+  let html="";
+  cats.forEach(cat=>{
+    const items=PRODUCTS.filter(p=>p.cat===cat && (!query || (p.title+" "+p.desc+" "+p.tag).toLowerCase().includes(query)));
+    if(!items.length) return;
+    html+=`<section class="section" id="${cat}">
+      <div class="section-head"><div><h2>${meta[cat][0]}</h2><p>${meta[cat][1]}</p></div></div>
+      <div class="grid">${items.map(card).join("")}</div>
+    </section>`;
+  });
+  catalog.innerHTML=html||`<div class="empty">Nenhum produto encontrado.</div>`;
+}
+document.querySelectorAll(".filter-btn").forEach(b=>b.onclick=()=>{
+  document.querySelectorAll(".filter-btn").forEach(x=>x.classList.remove("active"));
+  b.classList.add("active"); current=b.dataset.filter; render(); window.scrollTo({top:document.querySelector(".filters-shell").offsetTop-70,behavior:"smooth"});
+});
+q.addEventListener("input",render);
+render();
+</script>
+</body>
+</html>
